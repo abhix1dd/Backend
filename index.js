@@ -24,7 +24,9 @@ app.use(
 
 const cors = require('cors');
 app.use(cors());
-
+app.get('/',(req,res)=>{
+req.send({message:Success})
+})
 app.use('/blog',blogRoutes)
 
 const PORT=process.env.PORT||8000;
