@@ -5,8 +5,7 @@ const app=express()
 const blogRoutes=require('./routes/blogRoutes')
 require('dotenv').config();
 
-const mongoDB_URI=process.env.mongoDB_URI||'mongodb+srv://Blog:blogdb@cluster0.hfci20e.mongodb.net/?retryWrites=true&w=majority'
- 
+const mongoDB_URI=process.env.mongoDB_URI
 
 mongoose.connect(mongoDB_URI,{ useNewUrlParser: true })
 
